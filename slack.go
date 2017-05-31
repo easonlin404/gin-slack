@@ -4,15 +4,13 @@ import (
 	"github.com/easonlin404/esrest"
 )
 
-//TODO: extract slack token to config
-const Url = "https://hooks.slack.com/services/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"
 
-type Slack struct {
+type SlackClient struct {
 	WebhookURL string
 }
 
-func New() *Slack {
-	return &Slack{}
+func New() *SlackClient {
+	return &SlackClient{}
 }
 
 type Message struct {
@@ -34,7 +32,7 @@ type Field struct {
 	Short bool   `json:"short"`
 }
 
-func (s *Slack) SendMessage(message Message) {
+func (s *SlackClient) SendMessage(message Message) {
 	esrest.New().
 		Header("Content-Type", "text/plain").
 		Debug(true).
