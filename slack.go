@@ -2,8 +2,8 @@ package slack
 
 import (
 	"github.com/easonlin404/esrest"
+	"net/http"
 )
-
 
 type SlackClient struct {
 	WebhookURL string
@@ -32,8 +32,8 @@ type Field struct {
 	Short bool   `json:"short"`
 }
 
-func (s *SlackClient) SendMessage(message Message) {
-	esrest.New().
+func (s *SlackClient) SendMessage(message Message) (*http.Response, error) {
+	return esrest.New().
 		Header("Content-Type", "text/plain").
 		Debug(true).
 		Post(s.WebhookURL).
