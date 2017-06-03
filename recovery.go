@@ -29,12 +29,12 @@ func Recovery(s *slack.Slack) gin.HandlerFunc {
 	}
 }
 
-func genSlackMessage(httprequest []byte, err interface{}, stack []byte) Message {
+func genSlackMessage(httprequest []byte, err interface{}, stack []byte) slack.Message {
 	buf := new(bytes.Buffer)
 	fmt.Fprintf(buf, "%s%s ```%s```", httprequest, err, stack)
 
-	message := Message{
-		Attachments: []Attachment{
+	message := slack.Message{
+		Attachments: []slack.Attachment{
 			{Title: "notification",
 				Text:     string(buf.Bytes()),
 				MrkdwnIn: []string{"text"},
