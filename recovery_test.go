@@ -1,4 +1,4 @@
-package slack
+package ginslack
 
 import (
 	"github.com/easonlin404/go-slack"
