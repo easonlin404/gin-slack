@@ -5,6 +5,7 @@ Gin framework middleware for reporting panic to Slack.
 [![Travis branch](https://img.shields.io/travis/easonlin404/gin-slack/master.svg)](https://travis-ci.org/easonlin404/gin-slack)
 [![Codecov branch](https://img.shields.io/codecov/c/github/easonlin404/gin-slack/master.svg)](https://codecov.io/gh/easonlin404/gin-slack)
 [![Go Report Card](https://goreportcard.com/badge/github.com/easonlin404/gin-slack)](https://goreportcard.com/report/github.com/easonlin404/gin-slack)
+ [![GoDoc](https://godoc.org/github.com/easonlin404/gin-slack?status.svg)](https://godoc.org/github.com/easonlin404/gin-slack)
 ![Slack Image](https://easonlin404.github.io/gin-slack/images/slack.png)
 
 ## Features
