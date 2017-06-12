@@ -22,6 +22,7 @@ func Recovery(s *slack.Slack) gin.HandlerFunc {
 				message := genSlackMessage(httprequest, err, stack)
 
 				s.SendMessage(message)
+				c.AbortWithStatus(500)
 
 			}
 		}()

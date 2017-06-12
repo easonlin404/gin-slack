@@ -2,6 +2,7 @@ package ginslack
 
 import (
 	"github.com/easonlin404/go-slack"
+	"github.com/stretchr/testify/assert"
 	"gopkg.in/gin-gonic/gin.v1"
 	"net/http/httptest"
 	"os"
@@ -21,7 +22,9 @@ func TestRecovery(t *testing.T) {
 	r.GET("/", func(c *gin.Context) {
 		panic("oh, it's panic")
 	})
-	performRequest("GET", "/", r)
+	w := performRequest("GET", "/", r)
+
+	assert.Equal(t, 500, w.Result().StatusCode)
 
 }
 
