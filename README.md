@@ -22,7 +22,7 @@ package main
 import (
 	"github.com/easonlin404/gin-slack"
 	"github.com/easonlin404/go-slack"
-	"gopkg.in/gin-gonic/gin.v1"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {

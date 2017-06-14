@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/easonlin404/go-slack"
-	"gopkg.in/gin-gonic/gin.v1"
+	"github.com/gin-gonic/gin"
 	"log"
 	"net/http/httputil"
 	"runtime/debug"

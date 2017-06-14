@@ -2,8 +2,8 @@ package ginslack
 
 import (
 	"github.com/easonlin404/go-slack"
+	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
-	"gopkg.in/gin-gonic/gin.v1"
 	"net/http/httptest"
 	"os"
 	"testing"
